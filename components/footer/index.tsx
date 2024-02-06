@@ -13,7 +13,7 @@ export default function Footer(){
                 <div className="bg-white">..........</div>
                 <div className="bg-white">..........</div>
             </div>
-            <span className="text-white font-light">Com treinos personalizados e uma equipe dedicada a tornar seus sonhos realidade!</span>
+            <span className="text-white cursor-default font-light">Com treinos personalizados e uma equipe dedicada a tornar seus sonhos realidade!</span>
         </div>
     )
 }

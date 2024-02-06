@@ -1,6 +1,6 @@
 import CardsPlanos from '@/components/cards_planos'
 import PerguntasFrequentes from '@/components/perguntas_frequentes'
-import Image from 'next/image'
+import ContactUs from '@/components/contact_us'
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
     <div className="bg-black/95">
       <CardsPlanos/>
       <PerguntasFrequentes/>
+      <ContactUs/>
     </div>
     hello
    </>
