@@ -3,7 +3,7 @@ import CardPerguntas from "./card_pergunta";
 
 export default function PerguntasFrequentes(){
     return(
-        <div className="bg-black items-center w-full flex flex-col gap-8" >
+        <div style={{background: 'linear-gradient(to bottom, #02012F, #96969C 250%)' }}  className=" items-center w-full flex flex-col gap-8 pb-12" >
             <div className="mt-12 mb-8">
                 <Title title="PERGUNTAS PREQUENTES"/>
             </div>

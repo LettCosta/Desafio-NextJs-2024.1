@@ -8,7 +8,7 @@ const links= [
 export default function Header(){
     
     return(
-        <div>
+        <div style={{backgroundColor: '#0D2253'}}>
         </div>
     )
 }
