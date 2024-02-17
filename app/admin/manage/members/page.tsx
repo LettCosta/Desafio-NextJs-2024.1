@@ -7,7 +7,7 @@ export default function Page(){
         <div style={{background: 'linear-gradient(to bottom, #050437 60%, #3C3C41'}} className=" w-full space-y-12 flex flex-col items-center">
             <Title title="Gerenciamento de Membros"/>
             <Link href={'/admin/manage/members/create'}>
-                <button style={{backgroundColor: '#0A0953'}} className="bg-blue-900 font-medium text-white py-2 px-3 rounded-3xl text-sm hover:bg-blue-800 shadow-lg">
+                <button style={{backgroundColor: '#0A0953'}} className="font-medium text-white py-2 px-3 rounded-3xl text-sm  shadow-lg">
                    NOVO MEMBRO 
                 </button>
             </Link>

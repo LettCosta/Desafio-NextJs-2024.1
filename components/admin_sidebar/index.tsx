@@ -1,8 +1,9 @@
 'use client'
 
-import { LayoutDashboard, UserRoundSearch, Headphones, Home, Menu, X, Link } from "lucide-react"
+import { LayoutDashboard, UserRoundSearch, Headphones, Home, Menu, X } from "lucide-react"
 import Image from "next/image"
 import { useState } from "react"
+import Link from "next/link"
 
 const LinksSideBar = [
     {href: '/admin/manage/members', label: 'Membros', icon:UserRoundSearch},
@@ -31,7 +32,7 @@ export default function AdminSideBar(){
                     onClick={toggleAdminSideBar}
                 />
             </div>
-            <aside className={`fixed top-0 left-0 z-50 w-full sm:w-72 h-screen transition-transform ${isAdminSideBarOpen ? '': '-translate-x-full'} sm:translate-x-0  `}>
+            <aside className={`fixed top-0 left-0 z-50 w-full sm:w-60 h-screen transition-transform ${isAdminSideBarOpen ? '': '-translate-x-full'} sm:translate-x-0  `}>
                 <div style={{backgroundColor: '#0D2253'}} className=" h-full px-3 py-4 overflow-y-auto">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2 cursor-default">
@@ -51,7 +52,7 @@ export default function AdminSideBar(){
                     <ul className="space-y-8">
                         {LinksSideBar.map(({href, label, icon : Icon}, index) => (
                             <li key={index}>
-                            <Link href={href} className= "flex items-center px-1 my-6 rounded-lg hover:bg-white/20 ">
+                                <Link href={href} className= "flex items-center px-1 py-2 rounded-lg hover:bg-white/15 ">
                                     <Icon className="w-6 h-6 text-white"/>
                                     <span className="ms-3 text-xl text-white">{label}</span>
                                 </Link>

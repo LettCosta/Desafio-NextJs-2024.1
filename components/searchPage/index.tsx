@@ -1,6 +1,6 @@
 import { Search as SearchIcon} from "lucide-react";
 
-export default function Search(){
+export default function SearchPage(){
     return (
         <form className="flex basis-full" autoComplete="off">
             <div className="flex w-full flex-col items-center gap-6 my-10">
@@ -10,7 +10,7 @@ export default function Search(){
                     id="search"
                     name="search"
                     type="text"
-                    className="w-full rounded-xl px-16 py-6 text-white bg-rgba(217, 217, 217, 0.00) border-white caret-white transition-all duration-300"
+                    className="w-full rounded-xl px-16 py-6 text-white border-white caret-white transition-all duration-300"
                     placeholder="Faça sua busca!"
                     />
                 </div>
