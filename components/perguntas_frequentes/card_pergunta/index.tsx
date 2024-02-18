@@ -1,12 +1,47 @@
+'use client'
+import { ChevronDown, ChevronUp } from "lucide-react"
+import { useState } from "react"
+import Answer from "../answer"
+
 type QuestionProps = {
     text: string
 }
 
-export default function CardPerguntas( {text}: QuestionProps){
-    return(
-        <div className=" flex w-3/4 justify-center align-center h-auto rounded-sm bg-white">
-            <h1 className="text-black text-md font-medium text-start m-3 xl:text-lg 2xl:text-xl 3xl:text-2xl">{text}</h1>
-        </div>
 
+export default function CardPerguntas( {text}: QuestionProps){
+    
+    const [isAnswerOpen, setIsAnswerOpen] = useState(false)
+    const toggleAnswer = () => setIsAnswerOpen(!isAnswerOpen)
+   
+    
+    return(
+        <div className="flex w-3/4 align-center h-auto rounded-sm justify-between bg-white">
+            <div>
+                <h1 className="text-black text-md font-medium m-3 xl:text-lg 2xl:text-xl 3xl:text-2xl">{text}</h1>
+            </div>
+            
+
+            <button onClick={toggleAnswer}>
+                        {isAnswerOpen ?
+                            <div>
+                                <ChevronUp 
+                                onClick={toggleAnswer}
+                                className="text-black size-7 m-3  hover:bg-white/15 transition-all duration-200 rounded-xl"
+                                />
+                            </div>
+                            :
+                            <ChevronDown
+                            onClick={toggleAnswer}
+                            className="size-7 m-3 cursor-pointer text-black hover:bg-white/15 transition-all duration-200 rounded-xl"
+                            />
+                        }
+            </button>
+
+            {isAnswerOpen && (
+                <Answer/>
+            )}
+
+
+        </div>
     )
 }

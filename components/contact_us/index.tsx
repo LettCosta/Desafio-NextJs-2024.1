@@ -5,7 +5,7 @@ import { Mail } from 'lucide-react';
 
 export default function ContactUs(){
     return(
-        <div className="flex flex-row flex-wrap justify-center gap-64 align-middle items-center ">
+        <div style={{backgroundColor: '#0A0953'}} className="flex flex-col md:flex-row flex-wrap justify-center md:justify-between  p-24 align-middle items-center ">
             <div className="flex flex-col gap-4 text-left">
                 <div>
                     <Title title="ENTRE EM CONTATO CONOSCO"/>
@@ -27,6 +27,7 @@ export default function ContactUs(){
                 height='500'
                 src='/img/contact_us.png'
                 alt="Imagem ilustrativa de contato"
+                className="md:w-64 lg:w-96"
                 />
         </div>
     )
