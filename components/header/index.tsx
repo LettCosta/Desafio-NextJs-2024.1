@@ -41,7 +41,7 @@ export default function Header(){
     }, [pathname,searchParams])
 
     return(
-        <header style={{backgroundColor: '#0D2253'}} className="sticky top-0 z-20 w-full mx-auto py-8 px-4 md:p-0">
+        <header style={{backgroundColor: '#0D2253'}} className="sticky top-0 z-20 w-full mx-auto py-4 px-4 md:p-0">
             <div className=" flex justify-between w-full md:w-10/12 mx-auto">
                 <Link href='/' className="flex gap-4 items-center" >
                     <Image
@@ -103,14 +103,14 @@ export default function Header(){
                             className="text-white w-8 h-8 p-1 cursor-pointer"
                             /> 
                             :
-                            <div className="flex gap-4">
+                            <div className="flex gap-12">
                                 <SearchIcon
                                 onClick={toggleSearch}
                                 className="w-10 h-10 p-1 cursor-pointer text-white"
                                 />
                                 <Menu
                                 onClick={toggleNav}
-                                className="w-10 h-10 p-1 text-white cursor-pointer"
+                                className="w-10 h-10 p-1 mr-2 text-white cursor-pointer"
                                 />
                             </div>
                         }
@@ -122,7 +122,7 @@ export default function Header(){
                 
 
 
-                <div className=" flex-wrap items-center gap-12 md:gap-4 hidden md:flex">
+                <div className=" flex-wrap items-center gap-12 md:gap-4 hidden md:flex-col">
                     <Link href='/' className="flex gap-4  items-center">
                         <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
                             Home

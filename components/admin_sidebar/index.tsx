@@ -7,7 +7,7 @@ import Link from "next/link"
 
 const LinksSideBar = [
     {href: '/admin/manage/members', label: 'Membros', icon:UserRoundSearch},
-    {href: '/contato', label: 'Contato', icon:Headphones},
+    {href: '/admin/contato', label: 'Contato', icon:Headphones},
     {href: '/', label: 'Home', icon: Home},
 ]
 
