@@ -6,7 +6,7 @@ import TresImg from '@/components/tresimg'
 export default function Home() {
   return (
    <>
-    <div style={{backgroundColor: '#1B1A1A'}} >
+    <div className=' bg-gray-400' >
       <TresImg/>
       <div className='bg-blue-900 w-full h-0.1 rounded-lg shadow-sm'></div>
       <CardsPlanos/>

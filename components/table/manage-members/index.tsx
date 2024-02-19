@@ -3,9 +3,9 @@ import { DeleteButton, EditButton, ViewButton } from "../buttons";
 
 export default function ManageMembersTable(){
     return(
-        <div style={{backgroundColor: '#D9D9D9'}} className=" w-3/4 relative overflow-x-auto shadow-md sm:rounded-lg items-center">
+        <div style={{backgroundColor: '#D9D9D9'}} className=" w-3/4 relative overflow-x-auto shadow-md rounded-lg items-center">
             <table>
-                <thead className="">
+                <thead>
                     <tr>
                         <th scope="col" className="px-6 py-3 font-normal text-lg text-blue-900">
                             ID

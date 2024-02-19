@@ -1,9 +1,10 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
-import SearchPage from "../searchPage"
+import { useEffect, useState } from "react"
 import { Menu, SearchIcon, X } from "lucide-react"
+import SearchBox from "../searchBox"
+import { usePathname, useSearchParams } from "next/navigation"
 
 
 const links= [
@@ -18,6 +19,9 @@ export default function Header(){
     const [isNavOpen, setIsNavOpen] = useState(false)
     const [isSearchOpen, setIsSearchOpen] = useState(false)
  
+    const pathname = usePathname()
+    const searchParams = useSearchParams()
+
     const toggleNav = () => setIsNavOpen(!isNavOpen)
     const toggleSearch = () => setIsSearchOpen(!isSearchOpen)
 
@@ -29,6 +33,12 @@ export default function Header(){
             toggleNav()
         }
     }
+
+    useEffect(()=>{
+        setIsSearchOpen(false)
+        setIsNavOpen(false)
+
+    }, [pathname,searchParams])
 
     return(
         <header style={{backgroundColor: '#0D2253'}} className="sticky top-0 z-20 w-full mx-auto py-8 px-4 md:p-0">
@@ -44,7 +54,7 @@ export default function Header(){
                 </Link>
 
                 {isSearchOpen && (
-                    <SearchPage />
+                    <SearchBox />
                 )}
 
                 {isNavOpen && (

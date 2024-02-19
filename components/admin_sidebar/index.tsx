@@ -20,11 +20,11 @@ export default function AdminSideBar(){
             <div style={{backgroundColor: '#0D2253'}} className=" sm:hidden flex flex-wrap items-center justify-between px-3 py-4">
                 <div className="flex items-center gap-2 cursor-default">
                     <Image
-                        src={'/img/logo.png'}
-                        alt="Logo da academia"
-                        width={48}
-                        height={48}
-                        className="w-20 h-16"
+                    width='500'
+                    height='500'
+                    src='/img/logo.png'
+                    alt="Logo"
+                    className="w-32 h-24"
                     />
                 </div>
                 <Menu
@@ -37,11 +37,11 @@ export default function AdminSideBar(){
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2 cursor-default">
                             <Image
-                            src={'/img/logo.png'}
-                            alt="Logo da academia"
-                            width={48}
-                            height={48}
-                            className="w-20 h-16"
+                            width='500'
+                            height='500'
+                            src='/img/logo.png'
+                            alt="Logo"
+                            className="w-32 h-24"
                             />
                         </div>
                         <X

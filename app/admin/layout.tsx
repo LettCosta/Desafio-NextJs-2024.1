@@ -8,7 +8,7 @@ export default function AdminLayout({
     return(
         <section>
             <AdminSideBar />
-            <section className=" sm:px-20 sm:ml-64 ">
+            <section className=" sm:pl-20 sm:ml-40  ">
                 {children}
             </section>
         </section>
