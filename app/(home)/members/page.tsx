@@ -1,6 +1,7 @@
 import MembersTable from "@/components/table/members";
+import { Membro } from "@prisma/client";
 
-export default function MembersPage(){
+export default function MembersPage({members, count}: {members: Membro[], count:number}){
     return(
         <div style={{backgroundColor: '#D9D9D9'}} className=" w-3/4 relative overflow-x-auto shadow-md rounded-lg items-center">
             <table>
@@ -21,9 +22,11 @@ export default function MembersPage(){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        
-                    </tr>
+                    {
+                    members.map((members, index) => (
+                        <MembersTable key={index} members={members}/>
+
+                    ))} 
                 </tbody>
             </table>
                

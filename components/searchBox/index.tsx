@@ -30,14 +30,14 @@ export default function SearchBox(){
 
 
     return (
-            <form onSubmit={handleSubmit} className="flex" autoComplete="off">
-                <div className="flex w-auto flex-col items-center gap-2 my-10">
-                    <div className="relative flex w-auto items-center">
+            <form onSubmit={handleSubmit} className="w-3/4 flex justify-end" autoComplete="off">
+                <div className="flex flex-col items-center gap-2 my-10">
+                    <div className="relative flex items-center">
                         <input
                         id="search"
                         name="search"
                         type="text"
-                        className="w-auto rounded-3xl px-4 py-1 text-black border-white caret-white transition-all duration-300"
+                        className="w-full rounded-3xl px-4 py-1 text-black border-white caret-white transition-all duration-300"
                         placeholder="Faça sua busca!"
                         onChange={(e) => setSearchTerm(e.target.value)}
                         />

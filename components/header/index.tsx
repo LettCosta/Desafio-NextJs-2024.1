@@ -57,28 +57,54 @@ export default function Header(){
                     <SearchBox />
                 )}
 
+
+                {!isSearchOpen && (
+                    <div className=" flex-wrap items-center gap-12 md:gap-4 hidden md:flex ">
+                        <Link href='/' className="flex gap-4  items-center">
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                                Home
+                            </button>
+                        </Link>
+                        <Link href='/contato' className="flex gap-4 items-center">
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 ">
+                                Contato
+                            </button>
+                        </Link>
+                        <Link href='/members' className="flex gap-4 items-center">
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                                Membros
+                            </button>
+                        </Link>
+                        <Link href='/login' className="flex gap-4 items-center">
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                                Login
+                            </button>
+                        </Link>
+                    </div>
+                )}
+
                 {isNavOpen && (
                     <div className="md:hidden flex basis-full flex-col items-center gap-6 mt-20 justify-center ">
                         <Link href='/' className="flex gap-4  items-center">
-                        <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
-                            Home
-                        </button>
-                    </Link>
-                    <Link href='/contato' className="flex gap-4 items-center">
-                        <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
-                            Contato
-                        </button>
-                    </Link>
-                    <Link href='/members' className="flex gap-4 items-center">
-                        <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
-                            Membros
-                        </button>
-                    </Link>
-                    <Link href='/login' className="flex gap-4 items-center">
-                        <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
-                            Login
-                        </button>
-                    </Link>
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                                Home
+                            </button>
+                        </Link>
+                        <Link href='/contato' className="flex gap-4 items-center">
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                                Contato
+                            </button>
+                        </Link>
+                        <Link href='/members' className="flex gap-4 items-center">
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                                Membros
+                            </button>
+                        </Link>
+                        <Link href='/login' className="flex gap-4 items-center">
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                                Login
+                            </button>
+                        </Link>
                     </div>
                 )}
                 
@@ -103,47 +129,22 @@ export default function Header(){
                             className="text-white w-8 h-8 p-1 cursor-pointer"
                             /> 
                             :
-                            <div className="flex gap-12">
+                            <div className="flex gap-16">
                                 <SearchIcon
                                 onClick={toggleSearch}
                                 className="w-10 h-10 p-1 cursor-pointer text-white"
                                 />
                                 <Menu
                                 onClick={toggleNav}
-                                className="w-10 h-10 p-1 mr-2 text-white cursor-pointer"
+                                className="w-10 h-10 p-1 text-white cursor-pointer"
                                 />
                             </div>
                         }
                     </div>
                 </nav>
 
-        
-
                 
-
-
-                <div className=" flex-wrap items-center gap-12 md:gap-4 hidden md:flex-col">
-                    <Link href='/' className="flex gap-4  items-center">
-                        <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
-                            Home
-                        </button>
-                    </Link>
-                    <Link href='/contato' className="flex gap-4 items-center">
-                        <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
-                            Contato
-                        </button>
-                    </Link>
-                    <Link href='/members' className="flex gap-4 items-center">
-                        <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
-                            Membros
-                        </button>
-                    </Link>
-                    <Link href='/login' className="flex gap-4 items-center">
-                        <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
-                            Login
-                        </button>
-                    </Link>
-                </div>
+                
             </div>
         </header>
     )

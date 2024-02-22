@@ -17,7 +17,11 @@ export async function fetchFilteredMembers(query:string, currentPage:number) {
     const count= await prisma.membro.count({
         where:{
             OR: [{name: {contains: query, mode:"insensitive"}}]
-        }
+        },
+        orderBy:{
+            id: "asc"
+        },
+
     })
 
     return {members, count};

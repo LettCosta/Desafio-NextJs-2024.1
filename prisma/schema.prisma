@@ -15,6 +15,5 @@ model Membro {
   name     String
   cargo   String
   email  String
-  published Boolean
 }
 

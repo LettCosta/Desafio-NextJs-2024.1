@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function TresImg(){
     return(
-        <div className="bg-white flex hover:shadow-lg shadow-sm rounded-s-full w-11/12">
+        
             <div>
-                <div className="flex ml-32 gap-12 px-10 py-20 justify-around">
+                <div className="flex flex-row gap-12 px-10 py-20 justify-between">
                     <Image
                     width='500'
                     height='500'
@@ -29,6 +29,5 @@ export default function TresImg(){
                 </div> 
     
             </div>
-        </div>
     )
 }

@@ -1,7 +1,7 @@
-import { Link } from "lucide-react";
-import { DeleteButton, EditButton, ViewButton } from "../buttons";
+import MembersTable from "../members";
+import { Membro } from "@prisma/client";
 
-export default function ManageMembersTable(){
+export default function ManageMembersTable({members}: {members: Membro[]}){
     return(
         <div style={{backgroundColor: '#D9D9D9'}} className=" w-3/4 relative overflow-x-auto shadow-md rounded-lg items-center">
             <table>
@@ -25,46 +25,14 @@ export default function ManageMembersTable(){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr className="border-b hover:bg-blue-100">
-                        <th className="px-6 py-6 font-medium text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl md:text-md sm:text-sm">
-                            1
-                        </th>
-                        <th className="px-6 py-6 font-medium text-md xl:text-lg 2xl:text-xl 3xl:text-2xl md:text-sm sm:text-sm">
-                                Ana Clara Leles Quintão
-                        </th>
-                        <th className="px-6 py-6 font-medium text-md  xl:text-lg 2xl:text-xl 3xl:text-2xl md:text-sm sm:text-sm">
-                            Membro
-                        </th>
-                        <th className="px-6 py-6 font-medium text-md  xl:text-lg 2xl:text-xl 3xl:text-2xl md:text-sm sm:text-sm">
-                            Ana@gmail.com
-                        </th>
-                        <th className="px-6 py-6 flex items-center gap-2">
-                            <ViewButton id={1} />
-                            <EditButton id={1} />
-                            <DeleteButton id={1} />
-                        </th>
-                    </tr>
-                    <tr className="border-b hover:bg-blue-100">
-                        <th className="px-6 py-6 font-medium text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl md:text-md sm:text-sm">
-                            1
-                        </th>
-                        <th className="px-6 py-6 font-medium text-md xl:text-lg 2xl:text-xl 3xl:text-2xl md:text-sm sm:text-sm">
-                                AnaClara LelesQuintão
-                        </th>
-                        <th className="px-6 py-6 font-medium text-md  xl:text-lg 2xl:text-xl 3xl:text-2xl md:text-sm sm:text-sm">
-                            Membro
-                        </th>
-                        <th className="px-6 py-6 font-medium text-md  xl:text-lg 2xl:text-xl 3xl:text-2xl md:text-sm sm:text-sm">
-                            Anaaaaaaaa@gmail.com
-                        </th>
-                        <th className="px-6 py-6 flex items-center gap-2">
-                            <ViewButton id={1} />
-                            <EditButton id={1} />
-                            <DeleteButton id={1} />
-                        </th>
-                        
-                    </tr>
-                </tbody>
+                        <tr className="border-b w-full hover:bg-blue-100">
+                                {members.map((members, index) => (
+                                    <MembersTable key={index} members={members}/>
+
+                                ))}                       
+                        </tr>
+            
+                    </tbody>
             </table>
                
         </div>
