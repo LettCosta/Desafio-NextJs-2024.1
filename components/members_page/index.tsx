@@ -1,8 +1,7 @@
-
+import MembersTable from "@/components/table/members";
 import { Membro } from "@prisma/client";
-import ManageMembers from "./manage_table";
 
-export default function ManageMembersTable({members}: {members: Membro[]}){
+export default function MembersPage({members, count}: {members: Membro[], count:number}){
     return(
         <div style={{backgroundColor: '#D9D9D9'}} className=" w-3/4 relative overflow-x-auto shadow-md rounded-lg items-center">
             <table>
@@ -20,17 +19,15 @@ export default function ManageMembersTable({members}: {members: Membro[]}){
                         <th scope="col" className="px-6 py-3 font-normal text-lg text-blue-900">
                             EMAIL
                         </th>
-                        <th scope="col" className="px-6 py-3 font-normal text-lg text-blue-900">
-                            AÇÕES
-                        </th>
                     </tr>
                 </thead>
-                <tbody>        
-                                {members.map((members, index) => (
-                                    <ManageMembers key={index} members={members}/>
+                <tbody>
+                    {
+                    members.map((members, index) => (
+                        <MembersTable key={index} members={members}/>
 
-                                ))}                       
-                    </tbody>
+                    ))} 
+                </tbody>
             </table>
                
         </div>
