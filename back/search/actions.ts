@@ -1,16 +1,20 @@
 import prisma from "@/lib/db";
 
-const itensPerPage = 6;
+const itensPerPage = 5;
 
 export async function fetchFilteredMembers(query:string, currentPage:number) {
+ 
+    const offset = (currentPage-1)*itensPerPage
+ 
     const members = await prisma.membro.findMany({
         where:{
             OR: [{name: {contains: query, mode:"insensitive"}}]
         },
         orderBy:{
-            name: "asc"
+            id: "asc"
         },
-        take:itensPerPage
+        take: itensPerPage,
+        skip: offset
     })
 
 
@@ -24,23 +28,24 @@ export async function fetchFilteredMembers(query:string, currentPage:number) {
 
     })
 
-    return {members, count};
+    const totalPages = Math.ceil(count / itensPerPage)
+
+    return {members, count, totalPages};
 }
 
-export async function membersAll() {
+
+export async function membersAll(currentPage: number) {
+   
+    const offset = (currentPage-1)*itensPerPage
     const members = await prisma.membro.findMany({
         orderBy:{
             id: "asc"
         },
-        take:itensPerPage
+        take:itensPerPage,
+        skip: offset
     })
+    
+    const totalPages = Math.ceil( 35/ itensPerPage)
 
-    const count = await prisma.membro.count({
-        orderBy:{
-            id: "asc"
-        },
-
-    })
-
-    return {members, count};
+    return {members, totalPages};
 }

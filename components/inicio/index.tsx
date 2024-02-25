@@ -3,7 +3,7 @@ export default function Inicio(){
         <div style={{
         backgroundImage: 'url(/img/inicio.jpg)',
         backgroundSize: 'contain',
-        backgroundPosition: 'center',
+        backgroundPosition: 'top',
         backgroundRepeat: 'no-repeat',
         width: '100%',
         height: '100vh',

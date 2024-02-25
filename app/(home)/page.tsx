@@ -6,7 +6,7 @@ import TresImg from '@/components/tresimg'
 export default function Home() {
   return (
    <>
-    <div className=" bg-gray-400" >
+    <div style={{backgroundColor: '#F7F7F7'}} className=" " >
       <Inicio/>
       <div className='flex py-16'>
         <TresImg/>

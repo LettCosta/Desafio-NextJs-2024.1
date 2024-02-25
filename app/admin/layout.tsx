@@ -1,4 +1,4 @@
-import AdminSideBar from "@/components/admin_sidebar"
+import AdminHeader from "@/components/admin_header"
 
 export default function AdminLayout({
     children,
@@ -7,10 +7,8 @@ export default function AdminLayout({
 }) {
     return(
         <section>
-            <AdminSideBar />
-            <section className=" sm:pl-20 sm:ml-40  ">
+            <AdminHeader/>
                 {children}
-            </section>
         </section>
 
     )

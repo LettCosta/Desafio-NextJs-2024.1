@@ -5,27 +5,33 @@ export default function TresImg(){
         
             <div>
                 <div className="flex flex-row gap-12 px-10 py-20 justify-between">
-                    <Image
-                    width='500'
-                    height='500'
-                    src='/img/funcionarios.jpg'
-                    alt="Logo"
-                    className="rounded-xl h-52 w-64"
-                    />
-                    <Image
-                    width='500'
-                    height='500'
-                    src='/img/funcionarios.jpg'
-                    alt="Logo"
-                    className="rounded-xl w-64 h-52"
-                    />
-                    <Image
-                    width='500'
-                    height='500'
-                    src='/img/funcionarios.jpg'
-                    alt="Logo"
-                    className=" rounded-xl w-64 h-52"
-                    />
+                    <div className="bg-white rounded-xl h-72 px-6 flex items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-md justify-center pb-8">
+                        <Image
+                        width='500'
+                        height='500'
+                        src='/img/funcionarios.jpg'
+                        alt="Logo"
+                        className="rounded-xl h-52 w-64"
+                        />
+                    </div> 
+                    <div className="bg-white rounded-xl h-72 px-6 flex items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-md justify-center pb-8">
+                        <Image
+                        width='500'
+                        height='500'
+                        src='/img/funcionarios.jpg'
+                        alt="Logo"
+                        className="rounded-xl h-52 w-64"
+                        />
+                    </div> 
+                    <div className="bg-white rounded-xl h-72 px-6 flex items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-md justify-center pb-8">
+                        <Image
+                        width='500'
+                        height='500'
+                        src='/img/funcionarios.jpg'
+                        alt="Logo"
+                        className="rounded-xl h-52 w-64"
+                        />
+                    </div> 
                 </div> 
     
             </div>

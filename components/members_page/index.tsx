@@ -1,10 +1,12 @@
 import MembersTable from "@/components/table/members";
 import { Membro } from "@prisma/client";
+import Pagination from "../pagination";
 
-export default function MembersPage({members, count}: {members: Membro[], count:number}){
+export default function MembersPage({members, totalPages}: {members: Membro[], totalPages:number}){
+    
     return(
-        <div style={{backgroundColor: '#D9D9D9'}} className=" w-3/4 relative overflow-x-auto shadow-md rounded-lg items-center">
-            <table>
+        <div style={{backgroundColor: '#F8F8F8'}} className=" w-3/4 relative overflow-x-auto shadow-md rounded-lg text-center items-center">
+            <table className="w-full">
                 <thead>
                     <tr>
                         <th scope="col" className="px-6 py-3 font-normal text-lg text-blue-900">
@@ -29,7 +31,11 @@ export default function MembersPage({members, count}: {members: Membro[], count:
                     ))} 
                 </tbody>
             </table>
-               
+            <div className="my-2">
+                        {totalPages>1 &&(
+                            <Pagination totalPages={totalPages}/>
+                        )}
+            </div> 
         </div>
     )
 }
