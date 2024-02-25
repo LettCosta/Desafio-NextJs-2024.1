@@ -43,7 +43,7 @@ export default function Header(){
     return(
         <header style={{backgroundColor: '#0D2253'}} className="sticky top-0 z-20 w-full mx-auto py-4 px-4 md:p-0">
             <div className=" flex justify-between w-full md:w-10/12 mx-auto">
-                <Link href='/' className="flex gap-4 items-center" >
+                <Link href='/' >
                     <Image
                     width='500'
                     height='500'
@@ -84,24 +84,24 @@ export default function Header(){
                 )}
 
                 {isNavOpen && (
-                    <div className="md:hidden flex basis-full flex-col items-center gap-6 mt-20 justify-center ">
-                        <Link href='/' className="flex gap-4  items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                    <div className="md:hidden flex basis-full flex-col items-center gap-6 mt-20 justify-center min-h-screen ">
+                        <Link href='/' className="flex gap-4 items-center">
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-lg shadow-lg h-10 w-44">
                                 Home
                             </button>
                         </Link>
                         <Link href='/contato' className="flex gap-4 items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-lg shadow-lg h-10 w-44">
                                 Contato
                             </button>
                         </Link>
                         <Link href='/members' className="flex gap-4 items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-lg shadow-lg h-10 w-44">
                                 Membros
                             </button>
                         </Link>
                         <Link href='/login' className="flex gap-4 items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-lg shadow-lg h-10 w-44">
                                 Login
                             </button>
                         </Link>

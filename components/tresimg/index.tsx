@@ -1,8 +1,16 @@
+import { transform } from "next/dist/build/swc";
 import Image from "next/image";
+import { Transform } from "stream";
+
+const images = [
+    '/img/inicio.jpg',
+    '/img/delete.png',
+    '/img/a.jpg',
+  ];
 
 export default function TresImg(){
     return(
-        
+           
             <div>
                 <div className="flex flex-row gap-12 px-10 py-20 justify-between">
                     <div className="bg-white rounded-xl h-72 px-6 flex items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-md justify-center pb-8">

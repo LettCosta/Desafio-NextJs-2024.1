@@ -20,7 +20,7 @@ export default function LoginPage(){
                         <label className="text-white font-medium text-md md:text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl">Senha</label>
                         <input className=" rounded-3xl mb-6 lg:w-64 lg:mb-8 h-7 px-2" ></input>
                     <Link href={`/admin/manage/members`}> 
-                        <button style={{backgroundColor: '#0A0953'}} className="font-semibold text-white py-1 rounded-3xl h-8 text-center w-100 text-md md:text-lg md:py-3 md:px-5 lg:text-xl lg:py-3 xl:text-2xl xl:py-4 2xl:text-3xl 3xl:text-4xl">Login</button>
+                        <button style={{backgroundColor: '#0A0953'}} className="font-semibold px-8 text-white rounded-3xl h-8 text-center w-100 text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl">Login</button>
                     </Link>
                 </form>
             </div>

@@ -5,7 +5,7 @@ export default function CardsPlanos(){
     return(
         <div className="flex flex-col gap-y-12 min-h-screen">
             <div className="w-full h-px bg-white"></div>
-            <h1 className="mt-4 text-center font-medium text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl text-blue-800 cursor-default">
+            <h1 className="mt-4 text-center font-medium text-4xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl text-blue-800 cursor-default">
                 CONHEÇA NOSSOS PLANOS
             </h1>
             <div className="flex flex-col items-center md:flex-row md:m-6 md:gap-8">
