@@ -1,4 +1,4 @@
-"use server"
+'use server'
 
 import prisma from "@/lib/db"
 import { revalidatePath } from "next/cache";
@@ -18,8 +18,9 @@ export async function fetchMembers() {
     });
 
     const count= await prisma.membro.count();
+    const totalPages = Math.ceil(count /5)
 
-    return{members, count};
+    return{members, count, totalPages};
     
 }
 
@@ -39,11 +40,10 @@ export async function fetchMembersById(id:number | undefined) {
 
 
 
-export async function deleteMember(id:number | undefined) {
+export async function deleteMember(id:number|undefined) {
     await prisma.membro.delete({
-        where:{id},
+        where: {id},
     });
-    
     revalidatePath("/admin/manage/members");
 }
 
@@ -53,7 +53,6 @@ export async function createMember(formData:FormData) {
     const name = formData.get("name") as string;
     const cargo= formData.get("cargo") as string;
     const email= formData.get("email") as string;
-
     await prisma.membro.create({
         data:{
             name,

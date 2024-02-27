@@ -60,23 +60,24 @@ export default function Header(){
 
                 {!isSearchOpen && (
                     <div className=" flex-wrap items-center gap-12 md:gap-4 hidden md:flex ">
-                        <Link href='/' className="flex gap-4  items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                        <Link href='/' className="flex gap-4 bg-blue items-center">
+                            <button
+                            style={{ backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-105">
                                 Home
                             </button>
                         </Link>
                         <Link href='/contato' className="flex gap-4 items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 ">
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-105">
                                 Contato
                             </button>
                         </Link>
                         <Link href='/members' className="flex gap-4 items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-105">
                                 Membros
                             </button>
                         </Link>
                         <Link href='/login' className="flex gap-4 items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-105">
                                 Login
                             </button>
                         </Link>

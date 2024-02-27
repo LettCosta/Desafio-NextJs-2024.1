@@ -6,6 +6,7 @@
     import { Menu, SearchIcon, X } from "lucide-react"
     import SearchBox from "../searchBox"
     import { usePathname, useSearchParams } from "next/navigation"
+import AdmSearchBox from "../searchPage/adm/search_box"
     
     
     const links= [
@@ -55,7 +56,7 @@
                     </Link>
     
                     {isSearchOpen && (
-                        <SearchBox />
+                        <AdmSearchBox />
                     )}
     
     

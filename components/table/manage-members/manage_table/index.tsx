@@ -18,10 +18,12 @@ export default function ManageMembers({members}: {members:Membro}){
             <td className="px-6 py-6 font-medium text-sm xl:text-lg 2xl:text-xl 3xl:text-2xl md:text-md lg:text-lg">
                 {members?.email} 
             </td>
-            <td className="px-6 py-6 items-center flex text-center align-middle self-center gap-3 ">
-                <ViewButton id={members.id}/>
-                <EditButton id={members.id}/>
-                <DeleteButton id={members.id}/>
+            <td className="px-6 py-6 h-full ">
+                <div className="flex gap-3  justify-center items-center">
+                    <ViewButton id={members.id}/>
+                    <EditButton id={members.id}/>
+                    <DeleteButton id={members.id}/>
+                </div>
             </td>
         </tr>  
     )

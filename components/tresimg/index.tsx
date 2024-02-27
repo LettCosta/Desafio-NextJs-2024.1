@@ -12,33 +12,36 @@ export default function TresImg(){
     return(
            
             <div>
-                <div className="flex flex-row gap-12 px-10 py-20 justify-between">
-                    <div className="bg-white rounded-xl h-72 px-6 flex items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-md justify-center pb-8">
+                <div className="flex flex-col md:flex-row gap-12 mx-6 justify-between">
+                    <div className="bg-blue-950/90 rounded-xl h-72 px-6 flex flex-col items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-md justify-center pb-8">
                         <Image
                         width='500'
                         height='500'
-                        src='/img/funcionarios.jpg'
+                        src='/img/professor.jpg'
                         alt="Logo"
-                        className="rounded-xl h-52 w-64"
+                        className="rounded-xl w-80 h-48"
                         />
+                        <h2 className="text-white text-xl mt-4 text-center">Profissionais qualificados</h2>
                     </div> 
-                    <div className="bg-white rounded-xl h-72 px-6 flex items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-md justify-center pb-8">
+                    <div className="bg-blue-950/80 rounded-xl h-72 px-6 flex flex-col items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-md justify-center pb-8">
                         <Image
                         width='500'
                         height='500'
-                        src='/img/funcionarios.jpg'
+                        src='/img/bicicleta.jpg'
                         alt="Logo"
-                        className="rounded-xl h-52 w-64"
-                        />
+                        className="rounded-xl max-h-40 w-80"
+                        /> 
+                        <h2 className="text-white text-xl mt-4 text-center">Mais de 20 modalidades de aulas coletivas</h2>
                     </div> 
-                    <div className="bg-white rounded-xl h-72 px-6 flex items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-md justify-center pb-8">
+                    <div className="bg-blue-950 rounded-xl h-72 px-6 flex flex-col items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-md justify-center pb-8">
                         <Image
                         width='500'
                         height='500'
-                        src='/img/funcionarios.jpg'
+                        src='/img/academia.jpg'
                         alt="Logo"
-                        className="rounded-xl h-52 w-64"
+                        className="rounded-xl max-h-40 w-80"
                         />
+                        <h2 className="text-white font-medium text-xl mt-4 text-center">Equipamentos de qualidade</h2>
                     </div> 
                 </div> 
     

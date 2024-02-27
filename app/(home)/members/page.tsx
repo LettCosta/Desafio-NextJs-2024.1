@@ -1,19 +1,16 @@
-import { fetchFilteredMembers } from "@/back/search/actions";
+import { fetchMembers } from "@/back/adm/actions";
 import MembersPage from "@/components/members_page";
-import SearchPage from "@/components/searchPage";
 
 export default async function Page() 
 {
     
-        const query=''
-        const currentPage= 1
-    
-        const {members} = await fetchFilteredMembers(query, currentPage)
+        const {members, totalPages} = await fetchMembers()
         
     
     return(
-        <div style={{background: 'linear-gradient(to bottom, #02012F, #96969C 250%)' }} className="w-full py-16 px-12  min-h-screen flex justify-center items-center">
-            <MembersPage totalPages={7} members={members} />
+        <div style={{background: 'linear-gradient(to bottom, #02012F, #96969C 250%)' }} className="w-full px-12 min-h-screen flex flex-col justify-start items-center">
+            <h1 className="text-white font-medium text-2xl mt-12 mb-12 text-center">Página de membros</h1>
+            <MembersPage totalPages={totalPages} members={members} />
         </div>
     )
 }

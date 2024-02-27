@@ -1,6 +1,3 @@
-'use client'
-
-import { deleteMember } from "@/back/admin/actions"
 import { Eye, Pencil, Trash } from "lucide-react"
 import Link from "next/link"
 
@@ -22,10 +19,11 @@ export function EditButton( {id}: {id:number | undefined} ){
     )
 }
 
-export function DeleteButton( {id}: {id:number | undefined} ){
+
+export function DeleteButton( {id}:{id:number|undefined} ){
     return(
         <Link href={`/admin/manage/members/delete/${id}`}>
-            <Trash onClick={()=>deleteMember(id)} className=" size-7 text-blue-950 hover:underline"/>
+            <Trash className=" size-7 text-blue-950 hover:underline"/>
         </Link>
     )
 }

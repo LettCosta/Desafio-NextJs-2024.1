@@ -32,9 +32,9 @@ export default function MembersPage({members, totalPages}: {members: Membro[], t
                 </tbody>
             </table>
             <div className="my-2">
-                        {totalPages>1 &&(
-                            <Pagination totalPages={totalPages}/>
-                        )}
+                {totalPages>1 &&(
+                    <Pagination totalPages={totalPages}/>
+                )}
             </div> 
         </div>
     )
