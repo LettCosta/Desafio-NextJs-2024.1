@@ -18,9 +18,15 @@ export default function Footer(){
                 <a href="/login" className="text-white text-lg text-center hover:underline">LOGIN</a>
             </div>
            <div className="flex gap-6">
-            <Instagram className="text-white"/>
-            <Facebook className="text-white"/>
-            <Youtube className="text-white"/>
+            <a href="https://www.instagram.com/bluefitacademia?igsh=ZjdjazV0MTUzdG14">
+                <Instagram className="text-white"/>
+            </a>
+            <a href="https://www.facebook.com/bluefitacademia">
+                <Facebook className="text-white"/>
+            </a>
+            <a href="https://youtube.com/@BluefitAcademia?si=Z6tLoxy1VgZTHGij">
+                <Youtube className="text-white"/>
+            </a>
                 
             </div>
             <span className="text-white cursor-default font-light">Com treinos personalizados e uma equipe dedicada a tornar seus sonhos realidade!</span>

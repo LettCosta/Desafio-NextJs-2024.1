@@ -1,4 +1,6 @@
+import AboutUs from '@/components/about_us'
 import CardsPlanos from '@/components/cards_planos'
+import Depoimentos from '@/components/depoimentos'
 import Inicio from '@/components/inicio'
 import PerguntasFrequentes from '@/components/perguntas_frequentes'
 import TresImg from '@/components/tresimg'
@@ -8,6 +10,7 @@ export default function Home() {
    <>
     <div style={{backgroundColor: '#F7F7F7'}} className=" " >
       <Inicio/>
+      <AboutUs/>
       <div className='flex py-16'>
         <TresImg/>
       </div>
