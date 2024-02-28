@@ -1,4 +1,3 @@
-import Title from "../title";
 import Image from "next/image";
 import { Phone, Mail, Instagram, Facebook } from 'lucide-react';
 

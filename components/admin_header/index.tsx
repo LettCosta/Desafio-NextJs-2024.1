@@ -10,8 +10,8 @@ import AdmSearchBox from "../searchPage/adm/search_box"
     
     
     const links= [
+        {href: '/', label: 'Home'},
         {href: '/contato', label: 'Contato'},
-        {href: '/members', label: 'Membros'},
         {href: '/gerenciar', label: 'Gerenciar'},
         {href:'/login', label:'Login'}
     ]
@@ -63,22 +63,22 @@ import AdmSearchBox from "../searchPage/adm/search_box"
                     {!isSearchOpen && (
                         <div className=" flex-wrap items-center gap-12 md:gap-4 hidden md:flex ">
                             <Link href='/' className="flex gap-4  items-center">
-                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-75 transform hover:scale-120">
                                     Home
                                 </button>
                             </Link>
                             <Link href='/admin/contato' className="flex gap-4 items-center">
-                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 ">
+                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-75 transform hover:scale-120">
                                     Contato
                                 </button>
                             </Link>
                             <Link href='/admin/manage/members' className="flex gap-4 items-center">
-                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-75 transform hover:scale-120">
                                     Gerenciar
                                 </button>
                             </Link>
                             <Link href='/login' className="flex gap-4 items-center">
-                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
+                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-75 transform hover:scale-120">
                                     Login
                                 </button>
                             </Link>

@@ -8,9 +8,9 @@ import { usePathname, useSearchParams } from "next/navigation"
 
 
 const links= [
+    {href: '/', label: 'Home'},
     {href: '/contato', label: 'Contato'},
     {href: '/members', label: 'Membros'},
-    {href: '/gerenciar', label: 'Gerenciar'},
     {href:'/login', label:'Login'}
 ]
 
@@ -60,52 +60,31 @@ export default function Header(){
 
                 {!isSearchOpen && (
                     <div className=" flex-wrap items-center gap-12 md:gap-4 hidden md:flex ">
-                        <Link href='/' className="flex gap-4 bg-blue items-center">
+                    {links.map((link, index) => (
+                        <Link key={index} href={link.href} className="flex gap-4 bg-blue items-center">
                             <button
-                            style={{ backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-105">
-                                Home
+                                style={{ backgroundColor: '#080735'}}
+                                className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-105"
+                            >
+                                {link.label}
                             </button>
                         </Link>
-                        <Link href='/contato' className="flex gap-4 items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-105">
-                                Contato
-                            </button>
-                        </Link>
-                        <Link href='/members' className="flex gap-4 items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-105">
-                                Membros
-                            </button>
-                        </Link>
-                        <Link href='/login' className="flex gap-4 items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-105">
-                                Login
-                            </button>
-                        </Link>
-                    </div>
+                    ))}
+                </div>
                 )}
 
                 {isNavOpen && (
                     <div className="md:hidden flex basis-full flex-col items-center gap-6 mt-20 justify-center min-h-screen ">
-                        <Link href='/' className="flex gap-4 items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-lg shadow-lg h-10 w-44">
-                                Home
-                            </button>
-                        </Link>
-                        <Link href='/contato' className="flex gap-4 items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-lg shadow-lg h-10 w-44">
-                                Contato
-                            </button>
-                        </Link>
-                        <Link href='/members' className="flex gap-4 items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-lg shadow-lg h-10 w-44">
-                                Membros
-                            </button>
-                        </Link>
-                        <Link href='/login' className="flex gap-4 items-center">
-                            <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-lg shadow-lg h-10 w-44">
-                                Login
-                            </button>
-                        </Link>
+                        {links.map((link, index) => (
+                                <Link key={index} href={link.href} className="flex gap-4 bg-blue items-center">
+                                    <button
+                                        style={{ backgroundColor: '#080735'}}
+                                        className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-105"
+                                    >
+                                        {link.label}
+                                    </button>
+                                </Link>
+                            ))}
                     </div>
                 )}
                 
@@ -130,7 +109,7 @@ export default function Header(){
                             className="text-white w-8 h-8 p-1 cursor-pointer"
                             /> 
                             :
-                            <div className="flex gap-16">
+                            <div className="flex gap-4">
                                 <SearchIcon
                                 onClick={toggleSearch}
                                 className="w-10 h-10 p-1 cursor-pointer text-white"

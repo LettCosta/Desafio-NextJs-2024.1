@@ -30,8 +30,8 @@ export default function SearchBox(){
 
 
     return (
-            <form onSubmit={handleSubmit} className="w-3/4 flex justify-end" autoComplete="off">
-                <div className="flex flex-col items-center gap-2 my-10">
+            <form onSubmit={handleSubmit} className="w-3/4 flex items-center justify-end" autoComplete="off">
+                <div className="flex flex-col items-center gap-2">
                     <div className="relative flex items-center">
                         <input
                         id="search"

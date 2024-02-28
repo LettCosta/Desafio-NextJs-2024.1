@@ -5,7 +5,7 @@ import Pagination from "../pagination";
 export default function MembersPage({members, totalPages}: {members: Membro[], totalPages:number}){
     
     return(
-        <div style={{backgroundColor: '#F8F8F8'}} className=" w-3/4 relative overflow-x-auto shadow-md rounded-lg text-center items-center">
+        <div style={{backgroundColor: '#F8F8F8'}} className="w-full md:w-3/4 relative overflow-x-auto shadow-md rounded-lg text-center items-center">
             <table className="w-full">
                 <thead>
                     <tr>

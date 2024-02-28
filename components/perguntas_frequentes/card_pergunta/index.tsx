@@ -17,8 +17,8 @@ export default function CardPerguntas( {perg, ans}: QuestionProps){
    
     
     return(
-        <div className="flex flex-col w-3/4 h-auto rounded-sm ">
-            <div className="flex justify-between items-center bg-white" >
+        <div className="flex flex-col w-3/4 h-auto  ">
+            <div className="flex justify-between items-center rounded-sm bg-white" >
                 <h1 className="text-black cursor-default text-sm font-medium m-3 md:text-lg lg:text-xl xl:txt-2xl 2xl:text-3xl 3xl:text-4xl ">{perg}</h1>
 
                 <button 
