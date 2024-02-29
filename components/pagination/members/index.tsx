@@ -1,18 +1,21 @@
 'use client'
 
-import clsx from "clsx"
-import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
-import Link from "next/link"
-import { usePathname, useSearchParams } from "next/navigation"
+import clsx from "clsx";
+import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
+import Link from "next/link";
+import { usePathname, useSearchParams } from "next/navigation";
 
 
+export default function PaginationMembers({ totalPages, currentPage }: { totalPages: number, currentPage: number}) {
+    const {isCurrentPage, allPages} = useMembersPagination({ totalPages, currentPage});
+    const pathname = usePathname()
+    const createPageURL = (Page:number | string) =>{
+        const params = new URLSearchParams()
+        params.set("page", Page.toString())
+        return `${pathname}?${params.toString()}`
+   }
 
-export default function Pagination({totalPages}: {totalPages:number}){
-  
-   
-    const allPages= generatePagination(currentPage, totalPages)
-
-    return(
+    return (
         <div className="bg-blue-50/50 w-full flex items-center px-4 py-2 justify-center gap-6">
             <div className="flex">
                 <PaginationArrow
@@ -49,7 +52,7 @@ export default function Pagination({totalPages}: {totalPages:number}){
                 />
             </div>
         </div>
-    )
+    );
 }
 
 function PaginationNumber({
@@ -60,8 +63,8 @@ function PaginationNumber({
 }: {
     page: number | string;
     href: string;
-    position?: 'first' | 'last' | 'middle' | 'single';
     isActive: boolean;
+    position: 'first' | 'last' | 'single' | 'middle' | undefined;
 }) {
     const className = clsx(
         'flex h-10 w-10 items-center justify-center text-sm border',
@@ -74,11 +77,13 @@ function PaginationNumber({
         },
     );
 
-    return isActive || position === 'middle' ? (
-        <div className={className}>{page}</div>
-    ) : (
+    return (
         <Link href={href} className={className}>
-            {page}
+            {isActive || position === 'middle' ? (
+                <div className={className}>{page}</div>
+            ) : (
+                page
+            )}
         </Link>
     );
 }
@@ -90,7 +95,7 @@ function PaginationArrow({
 }: {
     href: string;
     direction: 'left' | 'right';
-    isDisabled?: boolean;
+    isDisabled: boolean;
 }) {
     const className = clsx(
         'flex h-10 w-10 items-center justify-center rounded-md border',
@@ -102,24 +107,19 @@ function PaginationArrow({
         },
     );
 
-    const icon =
-        direction === 'left' ? (
-            <ArrowLeftIcon className="w-4" />
-        ) : (
-            <ArrowRightIcon className="w-4" />
-        );
-
-    return isDisabled ? (
-        <div className={className}>{icon}</div>
-    ) : (
-        <Link className={className} href={href}>
-            {icon}
+    return (
+        <Link href={isDisabled ? '#' : href} className={className}>
+            {direction === 'left' ? (
+                <ArrowLeftIcon className="w-4" />
+            ) : (
+                <ArrowRightIcon className="w-4" />
+            )}
         </Link>
     );
 }
 
 const generatePagination = (currentPage: number, totalPages: number) => {
-   if (totalPages <= 7) {
+    if (totalPages <= 7) {
         return Array.from({ length: totalPages }, (_, i) => i + 1);
     }
 
@@ -141,4 +141,12 @@ const generatePagination = (currentPage: number, totalPages: number) => {
         totalPages,
     ];
 };
-    
+
+
+export const useMembersPagination = ({totalPages, currentPage}:{totalPages:number, currentPage:number}) => { 
+
+    const isCurrentPage = (page:number) => currentPage === page;
+    const allPages = generatePagination(currentPage, totalPages);
+
+    return {isCurrentPage, allPages};
+};

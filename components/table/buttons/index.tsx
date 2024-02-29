@@ -22,8 +22,8 @@ export function EditButton( {id}: {id:number | undefined} ){
 
 export function DeleteButton( {id}:{id:number|undefined} ){
     return(
-        <Link href={`/admin/manage/members/delete/${id}`}>
-            <Trash className=" size-7 text-blue-950"/>
+        <Link href={`/admin/manage/members/delete?id=${id}`}>
+            <Trash  className="size-7 text-blue-950"/>
         </Link>
     )
 }

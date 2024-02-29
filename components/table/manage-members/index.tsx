@@ -2,8 +2,9 @@ import { Membro } from "@prisma/client";
 import { DeleteButton, EditButton, ViewButton } from "../buttons";
 import Pagination from "@/components/pagination";
 import ManageMembers from "./manage_table";
+import PaginationMembers from "@/components/pagination/members";
 
-export default function ManageMembersTable({members, count, totalPages}: {members: Membro[], count:number, totalPages:number}){
+export default function ManageMembersTable({members, totalPages, currentPage}: {members: Membro[], totalPages:number, currentPage:number}){
    
    
     return(
@@ -29,15 +30,15 @@ export default function ManageMembersTable({members, count, totalPages}: {member
                     </tr>
                 </thead>
                 <tbody className="text-center">        
-                                {members.map((members, index) => (
-                                   <ManageMembers members={members} key={index}/>
+                    {members.map((members, index) => (
+                        <ManageMembers members={members} key={index}/>
 
-                                ))}                       
-                    </tbody>
+                    ))}                       
+                </tbody>
             </table>
             <div className="my-2">
                 {totalPages>1 &&(
-                    <Pagination totalPages={totalPages}/>
+                    <PaginationMembers currentPage={currentPage} totalPages={totalPages}/>
                 )}
             </div>    
         </div>

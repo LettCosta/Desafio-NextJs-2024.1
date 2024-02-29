@@ -74,7 +74,7 @@ export default function Header(){
                 )}
 
                 {isNavOpen && (
-                    <div className="md:hidden flex basis-full flex-col items-center gap-6 mt-20 justify-center min-h-screen ">
+                    <div className="md:hidden flex basis-full flex-col items-center gap-6 mt-20 justify-center min-h-screen">
                         {links.map((link, index) => (
                                 <Link key={index} href={link.href} className="flex gap-4 bg-blue items-center">
                                     <button

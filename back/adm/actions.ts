@@ -15,12 +15,13 @@ export async function fetchMembers(currentPage:number) {
             id:"asc",
         },
         take: itensPerPage,
+        skip : offset,
     });
 
     const count= await prisma.membro.count();
     const totalPages = Math.ceil(count / 5)
 
-    return{members, count, totalPages};
+    return{members, totalPages};
     
 }
 

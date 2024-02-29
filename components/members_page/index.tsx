@@ -1,8 +1,9 @@
 import MembersTable from "@/components/table/members";
 import { Membro } from "@prisma/client";
 import Pagination from "../pagination";
+import PaginationMembers from "../pagination/members";
 
-export default function MembersPage({members, totalPages}: {members: Membro[], totalPages:number}){
+export default function MembersPage({members, totalPages, currentPage}: {members: Membro[], totalPages:number, currentPage:number}){
     
     return(
         <div style={{backgroundColor: '#F8F8F8'}} className="w-full md:w-3/4 relative overflow-x-auto shadow-md rounded-lg text-center items-center">
@@ -33,7 +34,7 @@ export default function MembersPage({members, totalPages}: {members: Membro[], t
             </table>
             <div className="my-2">
                 {totalPages>1 &&(
-                    <Pagination totalPages={totalPages}/>
+                    <PaginationMembers currentPage={currentPage} totalPages={totalPages}/>
                 )}
             </div> 
         </div>
