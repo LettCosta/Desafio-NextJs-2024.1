@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname} from "next/navigation";
 
 
 export default function PaginationMembers({ totalPages, currentPage }: { totalPages: number, currentPage: number}) {

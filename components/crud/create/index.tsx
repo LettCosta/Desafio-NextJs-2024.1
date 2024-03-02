@@ -11,9 +11,9 @@ export default function CreateMember(){
                     <ArrowLeft className="text-blue-900 size-6 lg:size-10 lg:ml-6 mt-6 ml-6 justify-start"/>
                 </Link>
                 <div className=" flex flex-col-reverse items-center justify-around md:flex-row-reverse ">
-                    <div className="md:mr-8 md:mb-12 mb-12">
-                        <h1 className="text-blue-900 font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xl mb-8">CRIAR MEMBRO</h1>
-                        <form className="flex flex-col gap-4" autoComplete="off" action={createMember}>
+                    <div className="w-1/2">
+                        <h1 className="text-blue-900 text-center font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xl mb-8">CRIAR NOVO MEMBRO</h1>
+                        <form className="flex flex-col gap-4 items-center" autoComplete="off" action={createMember}>
                             <div className="flex flex-col gap-2 items-center">
                                 <label className="text-blue-900 font-medium text-md md:text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl">Nome</label>
                                 <input name="name" placeholder="Nome" className="  drop-shadow-xl border-zinc-200 border shadow-inherit rounded-3xl h-7 lg:w-64 px-2 " />
@@ -22,11 +22,8 @@ export default function CreateMember(){
                                 <label className="text-blue-900 font-medium text-md md:text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl mt-3">Email</label>
                                 <input name="email" placeholder="Email" className="  drop-shadow-xl border-zinc-200 border shadow-inherit rounded-3xl h-7 lg:w-64 px-2"/>
                             </div>
-                            <div className="flex flex-row justify-between gap-3 mt-4 mb-4">
-                                <button style={{backgroundColor: '#0A0953'}} className="font-semibold px-3 md:px-4 text-white rounded-3xl h-6 md:h-7 lg:h-9 xl:h-10  text-center w-6/12 x1:w-3/12 2xl:w-2/12 text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl">
-                                    Descartar
-                                </button>
-                                <button style={{backgroundColor: '#0A0953'}} className="font-semibold px-3 md:px-6 text-white rounded-3xl h-6 md:h-7 lg:h-9 xl:h-10  text-center  w-6/12 x1:w-3/12 2xl:w-2/12 text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl">
+                            <div className="flex justify-center items-center w-full mt-4 mb-4">
+                                <button style={{backgroundColor: '#0A0953'}} className="font-semibold px-3 md:px-6 text-white rounded-3xl h-6 md:h-7 lg:h-9 xl:h-10  text-center w-28 md:w-32 lg:w-48  text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl">
                                     Salvar
                                 </button>
                             </div>
@@ -38,7 +35,7 @@ export default function CreateMember(){
                         height='500'
                         src='/img/create.png'
                         alt="Imagem ilustrativa de criar"
-                        className="w-72 md:w-80 lg:w-96"
+                        className="w-64 md:w-80 lg:w-96"
                     />
                 </div>
             </div>

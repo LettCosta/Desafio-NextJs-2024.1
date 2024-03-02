@@ -1,6 +1,5 @@
 import MembersTable from "@/components/table/members";
 import { Membro } from "@prisma/client";
-import Pagination from "../pagination";
 import PaginationMembers from "../pagination/members";
 
 export default function MembersPage({members, totalPages, currentPage}: {members: Membro[], totalPages:number, currentPage:number}){

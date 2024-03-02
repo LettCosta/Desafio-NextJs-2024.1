@@ -52,7 +52,7 @@ const Depoimentos = () => {
   return (
     <section ref={ref} className="bg-gray-100 py-24">
       <div className="container mx-auto px-8">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center md:mb-18 font-bold text-blue-900 mb-10">Depoimentos de Clientes</h2>
+        <h2 className="font-intro-rust text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center md:mb-18 font-bold text-blue-900 mb-10">Depoimentos de Clientes</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {depoimentos.map((cliente, index) => (
             <motion.div

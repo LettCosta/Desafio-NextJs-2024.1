@@ -9,6 +9,8 @@ export default function DeleteConfirmation() {
   const memberId = Number(params["id"]);
 
   return (
-      <Delete id={memberId} />
+      <div style={{background: 'linear-gradient(to bottom, #02012F, #96969C 250%)' }} className=" flex items-center justify-center min-h-screen">
+        <Delete id={memberId} />
+      </div>
   );
 }

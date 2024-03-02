@@ -14,8 +14,8 @@ export default async function Page({searchParams} : MembroProp){
         
     
     return(
-        <div style={{background: 'linear-gradient(to bottom, #02012F, #96969C 250%)' }} className="w-full px-12 min-h-screen flex flex-col justify-start items-center">
-            <h1 className="text-white font-medium text-2xl mt-12 mb-12 text-center">Página de membros</h1>
+        <div style={{background: 'linear-gradient(to bottom, #02012F, #96969C 250%)' }} className="w-full pb-16 px-2 md:px-12 min-h-screen flex flex-col justify-start items-center">
+            <h1 className="text-white font-normal text-3xl mt-12 mb-6 text-center">Lista de Membros</h1>
             <MembersPage currentPage={currentPage} totalPages={totalPages} members={members} />
         </div>
     )

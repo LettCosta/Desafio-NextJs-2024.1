@@ -5,7 +5,7 @@ export default function PerguntasFrequentes(){
     return(
         <div style={{background: 'linear-gradient(to bottom, #02012F, #96969C 250%)' }}  className=" items-center w-full  flex flex-col gap-6 md:gap-8 pb-24" >
             <div className="mt-16 mb-6">
-                <h1 className="text-white text-2xl md:text-3xl 2xl:text-4xl 3xl:text-5xl ">Perguntas Frequentes</h1>
+                <h1 className="text-white text-center font-intro-rust text-2xl md:text-3xl 2xl:text-4xl 3xl:text-5xl ">PERGUNTAS FREQUENTES</h1>
             </div>
             <CardPerguntas perg="O que preciso para realizar a matrícula?" ans="Depois de escolher seu plano, basta ir à unidade mais próxima com um documento de identificação com foto e um comprovante de residência." />
             <CardPerguntas perg="Quais são as formas de pagamento aceitas pela BlueFit?" ans="Na BlueFit aceitamos dinheiro, cartões de crédito e débito, além de pix." />

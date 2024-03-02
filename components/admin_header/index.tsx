@@ -4,9 +4,8 @@
     import Link from "next/link"
     import { useEffect, useState } from "react"
     import { Menu, SearchIcon, X } from "lucide-react"
-    import SearchBox from "../searchBox"
     import { usePathname, useSearchParams } from "next/navigation"
-import AdmSearchBox from "../searchPage/adm/search_box"
+    import AdmSearchBox from "../searchPage/adm/search_box"
     
     
     const links= [
@@ -17,137 +16,109 @@ import AdmSearchBox from "../searchPage/adm/search_box"
     ]
     
     
-    export default function AdminHeader(){
-        const [isNavOpen, setIsNavOpen] = useState(false)
-        const [isSearchOpen, setIsSearchOpen] = useState(false)
-     
-        const pathname = usePathname()
-        const searchParams = useSearchParams()
     
-        const toggleNav = () => setIsNavOpen(!isNavOpen)
-        const toggleSearch = () => setIsSearchOpen(!isSearchOpen)
-    
-        const toggleNavSearch = ()=> {
-            if(isSearchOpen){
-                toggleSearch()
-            }
-            else{
-                toggleNav()
-            }
+export default function Header(){
+    const [isNavOpen, setIsNavOpen] = useState(false)
+    const [isSearchOpen, setIsSearchOpen] = useState(false)
+ 
+    const pathname = usePathname()
+    const searchParams = useSearchParams()
+
+    const toggleNav = () => setIsNavOpen(!isNavOpen)
+    const toggleSearch = () => setIsSearchOpen(!isSearchOpen)
+
+    const toggleNavSearch = ()=> {
+        if(isSearchOpen){
+            toggleSearch()
         }
-    
-        useEffect(()=>{
-            setIsSearchOpen(false)
-            setIsNavOpen(false)
-    
-        }, [pathname,searchParams])
-    
-        return(
-            <header style={{backgroundColor: '#0D2253'}} className="sticky top-0 z-20 w-full mx-auto py-4 px-4 md:p-0">
-                <div className=" flex justify-between w-full md:w-10/12 mx-auto">
-                    <Link href='/' className="flex gap-4 items-center" >
-                        <Image
-                        width='500'
-                        height='500'
-                        src='/img/logo.png'
-                        alt="Logo"
-                        className="w-32 h-24"
-                        />
-                    </Link>
-    
-                    {isSearchOpen && (
-                        <AdmSearchBox />
-                    )}
-    
-    
-                    {!isSearchOpen && (
-                        <div className=" flex-wrap items-center gap-12 md:gap-4 hidden md:flex ">
-                            <Link href='/' className="flex gap-4  items-center">
-                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-75 transform hover:scale-120">
-                                    Home
-                                </button>
-                            </Link>
-                            <Link href='/admin/contato' className="flex gap-4 items-center">
-                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-75 transform hover:scale-120">
-                                    Contato
-                                </button>
-                            </Link>
-                            <Link href='/admin/manage/members' className="flex gap-4 items-center">
-                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-75 transform hover:scale-120">
-                                    Gerenciar
-                                </button>
-                            </Link>
-                            <Link href='/login' className="flex gap-4 items-center">
-                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-75 transform hover:scale-120">
-                                    Login
-                                </button>
-                            </Link>
-                        </div>
-                    )}
-    
-                    {isNavOpen && (
-                        <div className="md:hidden flex basis-full flex-col items-center gap-6 mt-20 justify-center ">
-                            <Link href='/' className="flex gap-4  items-center">
-                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
-                                    Home
-                                </button>
-                            </Link>
-                            <Link href='/admin/contato' className="flex gap-4 items-center">
-                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 ">
-                                    Contato
-                                </button>
-                            </Link>
-                            <Link href='/admin/manage/members' className="flex gap-4 items-center">
-                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
-                                    Gerenciar
-                                </button>
-                            </Link>
-                            <Link href='/login' className="flex gap-4 items-center">
-                                <button style={{backgroundColor: '#080735'}} className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24">
-                                    Login
-                                </button>
-                            </Link>
-                        </div>
-                    )}
-                    
-                    <nav className="items-center flex ">
-                        <button onClick={toggleNav} className="hidden md:flex">
+        else{
+            toggleNav()
+        }
+    }
+
+    useEffect(()=>{
+        setIsSearchOpen(false)
+        setIsNavOpen(false)
+
+    }, [pathname,searchParams])
+
+    return(
+        <header style={{backgroundColor: '#0D2253'}} className="sticky top-0 z-20 mx-auto w-full py-8 px-4 md:p-0 mb-8">
+            <div className="flex flex-wrap items-center justify-between w-full md:w-10/12 mx-auto">
+                <Link href='/' >
+                    <Image
+                    width='500'
+                    height='500'
+                    src='/img/logo.png'
+                    alt="Logo"
+                    className="w-32 h-24"
+                    />
+                </Link>
+
+                <div className="hidden md:flex flex-row gap-4">
+                    {links.map((link, index) => (
+                        <Link href={link.href} key={index}>
+                            <button className="bg-[#080735] font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-110">
+                                    {link.label}
+                            </button>
+                        </Link>
+                    ))}
+                </div>
+                <nav className="flex justify-end ">
+                    <div className="hidden w-full md:flex items-center justify-between gap-6">
+                        <button onClick={toggleNav}>
                             {isSearchOpen ?
-                                <X 
+                                <X
                                 onClick={toggleSearch}
-                                className="text-white w-8 h-8 p-1 cursor-pointer  hover:bg-white/15 transition-all duration-200 rounded-xl"
-                                />
+                                className="w-10 h-10 text-white cursor-pointer hover:bg-white/20 transition-all duration-200 p-1 rounded-xl" />
                                 :
                                 <SearchIcon
                                 onClick={toggleSearch}
-                                className="w-8 h-8 p-1 cursor-pointer text-white hover:bg-white/15 transition-all duration-200 rounded-xl"
-                                />
+                                className="w-10 h-10 text-white cursor-pointer hover:bg-white/20 transition-all duration-200 p-1 rounded-xl" />
                             }
                         </button>
-                        <div className="md:hidden">
-                            {isNavOpen || isSearchOpen ?
-                                <X 
-                                onClick={toggleNavSearch}
-                                className="text-white w-8 h-8 p-1 cursor-pointer"
-                                /> 
-                                :
-                                <div className="flex gap-16">
-                                    <SearchIcon
-                                    onClick={toggleSearch}
-                                    className="w-10 h-10 p-1 cursor-pointer text-white"
-                                    />
-                                    <Menu
-                                    onClick={toggleNav}
-                                    className="w-10 h-10 p-1 text-white cursor-pointer"
-                                    />
-                                </div>
-                            }
-                        </div>
-                    </nav>
-    
-                    
-                    
-                </div>
-            </header>
-        )
-    }
+                    </div>
+                
+                    <div className="md:hidden">
+                        {isNavOpen || isSearchOpen ?
+                            <X 
+                            onClick={toggleNavSearch}
+                            className="text-white w-8 h-8 p-1 cursor-pointer"
+                            /> 
+                            :
+                            <div className="flex gap-4">
+                                <SearchIcon
+                                onClick={toggleSearch}
+                                className="w-10 h-10 p-1 cursor-pointer text-white"
+                                />
+                                <Menu
+                                onClick={toggleNav}
+                                className="w-10 h-10 p-1 text-white cursor-pointer"
+                                />
+                            </div>
+                        }
+                    </div>
+                </nav>
+
+                {isNavOpen &&(
+                    <div className="md:hidden flex basis-full flex-col items-center gap-6 mt-10 min-h-screen">
+                        {links.map((links, index) => (
+                            <Link key={index} href={links.href} className="flex items-center">
+                                <button className="bg-[#080735] font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-110">
+                                    {links.label}
+                                </button>
+                            </Link>
+                        ))}
+                    </div>
+                )}
+
+                {isSearchOpen && (
+                    <div className="w-full flex justify-end">
+                        <AdmSearchBox />    
+                    </div>
+                )}
+
+            </div>
+        </header>
+    )
+}

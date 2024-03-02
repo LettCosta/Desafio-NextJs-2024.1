@@ -17,12 +17,12 @@ const items = [
 
 export default function TresImg() {
   return (
-    <div className="bg-blue-950 py-16 w-full">
-      <div className="container mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="bg-blue-950 pb-10 pt-20 w-full">
+      <div className=" md:mx-8 mx-auto lg:mx-20 flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16 xl:gap-24">
         {items.map((item, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl px-4 py-8 flex flex-col items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-md"
+            className="bg-white w-2/3 md:w-60 md:h-80 lg:w-72 rounded-xl px-6 py-8 flex flex-col items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-md"
           >
             <div className="relative w-36 h-28 md:w-44 md:h-36 lg:w-56 lg:h-44 mb-4">
               <Image

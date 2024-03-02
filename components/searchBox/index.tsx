@@ -1,6 +1,5 @@
 'use client'
 
-import { Search as SearchIcon} from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -27,12 +26,9 @@ export default function SearchBox(){
     }
 
 
-
-
     return (
-            <form onSubmit={handleSubmit} className="w-3/4 flex items-center justify-end" autoComplete="off">
-                <div className="flex flex-col items-center gap-2">
-                    <div className="relative flex items-center">
+            <form onSubmit={handleSubmit} className="w-4/5 flex items-center justify-end mb-4" autoComplete="off">
+                    <div className="relative flex items-center w-full">
                         <input
                         id="search"
                         name="search"
@@ -42,7 +38,6 @@ export default function SearchBox(){
                         onChange={(e) => setSearchTerm(e.target.value)}
                         />
                     </div>
-                </div>
             </form>
     )
 }

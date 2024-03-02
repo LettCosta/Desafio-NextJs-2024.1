@@ -30,19 +30,17 @@ export default function AdmSearchBox(){
 
 
     return (
-            <form onSubmit={handleSubmit} className="w-3/4 flex justify-end" autoComplete="off">
-                <div className="flex flex-col items-center gap-2 my-10">
-                    <div className="relative flex items-center">
-                        <input
-                        id="search"
-                        name="search"
-                        type="text"
-                        className="w-full rounded-3xl px-4 py-1 text-black border-white caret-white transition-all duration-300"
-                        placeholder="Faça sua busca!"
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        />
-                    </div>
+        <form onSubmit={handleSubmit} className="w-4/5 flex items-center justify-end mb-4" autoComplete="off">
+                <div className="relative flex items-center w-full">
+                    <input
+                    id="search"
+                    name="search"
+                    type="text"
+                    className="w-full rounded-3xl px-4 py-1 text-black border-white caret-white transition-all duration-300"
+                    placeholder="Faça sua busca!"
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    />
                 </div>
-            </form>
-    )
+        </form>
+)
 }

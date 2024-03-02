@@ -6,10 +6,10 @@ import ManageMembers from "@/components/table/manage-members/manage_table"
 export default function AdmSearchPage({members, count, totalPages}: {members: Membro[] , count:number, totalPages:number}){
     
     return ( 
-        <div style={{background: 'linear-gradient(to bottom, #02012F, #96969C 250%)' }} className="w-full py-16 px-12  min-h-screen">
+        <div style={{background: 'linear-gradient(to bottom, #02012F, #96969C 250%)' }} className="w-full py-16 px-2 md:px-12  min-h-screen">
             <AdmSecondarySearch num={count} />
             {count != 0?(
-                <div style={{backgroundColor: '#F8F8F8'}} className=" w-full mt-16 mx-auto relative overflow-x-auto shadow-md sm:rounded-lg items-center">
+                <div style={{backgroundColor: '#F8F8F8'}} className=" w-full mt-16 mx-auto relative overflow-x-auto shadow-md rounded-lg items-center">
                     <table className="w-full">
                         <thead className="">
                             <tr>

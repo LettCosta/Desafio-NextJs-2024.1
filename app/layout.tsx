@@ -11,7 +11,7 @@ const montserrat= Montserrat({
 })
 
 
-
+const fontClasses = `${montserrat.className} font-sans`;
 
 export const metadata: Metadata = {
   title: 'BlueFit',
@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`montserrat.className`}>
+      <body className={fontClasses}>
         {children}
         </body>
     </html>

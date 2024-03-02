@@ -2,7 +2,7 @@ export default function HorariosFuncionamento(){
     return(
         <div className="bg-blue-950 py-16 px-8 md:px-24">
             <div className="w-full">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center md:mb-18 font-semibold text-white mb-8">
+                <h2 className="font-intro-rust text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-center md:mb-18 text-white mb-8">
                     Horários de Funcionamento:
                 </h2>
                 <div className="flex flex-col gap-2">

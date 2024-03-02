@@ -37,10 +37,10 @@ export default function CardPerguntas( {perg, ans}: QuestionProps){
                 </button>
             </div>
 
-            <div className={"w-full transition-opacity duration-500 ease-in delay-100 opacity-" + (isAnswerOpen ? "100" : "0")}>
+            <div className={"w-full transition-opacity duration-500 ease-in delay-100 opacity-"+(isAnswerOpen ? "100" : "0")}>
                     {isAnswerOpen && (
-                        <h2 className="text-white text-sm m-3 md:text-md lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl ">{ans}</h2>
-                        )}
+                        <h2 className="text-white text-sm m-3 md:text-md lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl">{ans}</h2>
+                    )}
             </div>
 
         </div>

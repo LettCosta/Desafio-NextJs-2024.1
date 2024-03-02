@@ -41,8 +41,8 @@ export default function Header(){
     }, [pathname,searchParams])
 
     return(
-        <header style={{backgroundColor: '#0D2253'}} className="sticky top-0 z-20 w-full mx-auto py-4 px-4 md:p-0">
-            <div className=" flex justify-between w-full md:w-10/12 mx-auto">
+        <header style={{backgroundColor: '#0D2253'}} className="sticky top-0 z-20 mx-auto w-full py-8 px-4 md:p-0 mb-8">
+            <div className="flex flex-wrap items-center justify-between w-full md:w-10/12 mx-auto">
                 <Link href='/' >
                     <Image
                     width='500'
@@ -53,55 +53,30 @@ export default function Header(){
                     />
                 </Link>
 
-                {isSearchOpen && (
-                    <SearchBox />
-                )}
-
-
-                {!isSearchOpen && (
-                    <div className=" flex-wrap items-center gap-12 md:gap-4 hidden md:flex ">
+                <div className="hidden md:flex flex-row gap-4">
                     {links.map((link, index) => (
-                        <Link key={index} href={link.href} className="flex gap-4 bg-blue items-center">
-                            <button
-                                style={{ backgroundColor: '#080735'}}
-                                className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-105"
-                            >
-                                {link.label}
+                        <Link href={link.href} key={index}>
+                            <button className="bg-[#080735] font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-110">
+                                    {link.label}
                             </button>
                         </Link>
                     ))}
                 </div>
-                )}
-
-                {isNavOpen && (
-                    <div className="md:hidden flex basis-full flex-col items-center gap-6 mt-20 justify-center min-h-screen">
-                        {links.map((link, index) => (
-                                <Link key={index} href={link.href} className="flex gap-4 bg-blue items-center">
-                                    <button
-                                        style={{ backgroundColor: '#080735'}}
-                                        className="font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-105"
-                                    >
-                                        {link.label}
-                                    </button>
-                                </Link>
-                            ))}
+                <nav className="flex justify-end ">
+                    <div className="hidden w-full md:flex items-center justify-between gap-6">
+                        <button onClick={toggleNav}>
+                            {isSearchOpen ?
+                                <X
+                                onClick={toggleSearch}
+                                className="w-10 h-10 text-white cursor-pointer hover:bg-white/20 transition-all duration-200 p-1 rounded-xl" />
+                                :
+                                <SearchIcon
+                                onClick={toggleSearch}
+                                className="w-10 h-10 text-white cursor-pointer hover:bg-white/20 transition-all duration-200 p-1 rounded-xl" />
+                            }
+                        </button>
                     </div>
-                )}
                 
-                <nav className="items-center flex ">
-                    <button onClick={toggleNav} className="hidden md:flex">
-                        {isSearchOpen ?
-                            <X 
-                            onClick={toggleSearch}
-                            className="text-white w-8 h-8 p-1 cursor-pointer  hover:bg-white/15 transition-all duration-200 rounded-xl"
-                            />
-                            :
-                            <SearchIcon
-                            onClick={toggleSearch}
-                            className="w-8 h-8 p-1 cursor-pointer text-white hover:bg-white/15 transition-all duration-200 rounded-xl"
-                            />
-                        }
-                    </button>
                     <div className="md:hidden">
                         {isNavOpen || isSearchOpen ?
                             <X 
@@ -123,8 +98,24 @@ export default function Header(){
                     </div>
                 </nav>
 
-                
-                
+                {isNavOpen &&(
+                    <div className="md:hidden flex basis-full flex-col items-center gap-6 mt-10 min-h-screen">
+                        {links.map((links, index) => (
+                            <Link key={index} href={links.href} className="flex items-center">
+                                <button className="bg-[#080735] font-semibold text-white py-1 px-3 rounded-3xl text-sm shadow-lg h-8 w-24 transition-transform duration-300 transform hover:scale-110">
+                                    {links.label}
+                                </button>
+                            </Link>
+                        ))}
+                    </div>
+                )}
+
+                {isSearchOpen && (
+                    <div className="w-full flex justify-end">
+                        <SearchBox />    
+                    </div>
+                )}
+
             </div>
         </header>
     )
