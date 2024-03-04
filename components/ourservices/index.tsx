@@ -1,5 +1,5 @@
+import { Activity, Award, Droplet, Dumbbell, HandHeart, Heart, Leaf, Ruler, Salad, UsersRound } from 'lucide-react';
 import React from 'react';
-import { Dumbbell, Users, Droplet, Heart, Umbrella, Book } from 'lucide-react';
 
 export default function OurServices() {
   return (
@@ -8,8 +8,8 @@ export default function OurServices() {
       <div className="flex flex-wrap justify-center">
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 md:px-2 lg:px-4 mb-8">
           <div style={{ background: 'linear-gradient(to bottom right, #02012F, #0A1854)' }} className=" rounded-lg p-8 transition duration-500 ease-in-out transform hover:scale-105 h-80 md:h-80  ">
-            <div className="icon-wrapper bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 md:mb-2 lg:mb-4 mx-auto">
-              <Dumbbell size={32} />
+            <div className="icon-wrapper bg-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 md:mb-2 lg:mb-4 mx-auto">
+              <Award size={32} />
             </div>
             <div>
               <h3 className="text-lg lg:md:text-xl font-semibold text-white text-center mb-4">Treinamento Personalizado</h3>
@@ -19,8 +19,8 @@ export default function OurServices() {
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 md:px-2 lg:px-4 mb-8">
           <div style={{ background: 'linear-gradient(to bottom right, #02012F, #0A1854 )' }} className="rounded-lg p-8 transition duration-500 ease-in-out transform hover:scale-105 h-80 md:h-80 ">
-            <div className="icon-wrapper bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center md:mb-2 lg:mb-4 mx-auto">
-              <Book size={32} />
+            <div className="icon-wrapper bg-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center md:mb-2 lg:mb-4 mx-auto">
+              <UsersRound size={32} />
             </div>
             <div>
               <h3 className="text-lg lg:md:text-xl font-semibold text-white text-center mb-4">Aulas em Grupo</h3>
@@ -30,8 +30,8 @@ export default function OurServices() {
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 md:px-2 lg:px-4 mb-8">
           <div style={{ background: 'linear-gradient(to bottom right, #02012F, #0A1854 )' }} className="rounded-lg p-8 transition duration-500 ease-in-out transform hover:scale-105 h-80 md:h-80 ">
-            <div className="icon-wrapper bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center md:mb-2 lg:mb-4 mx-auto">
-              <Users size={32} />
+            <div className="icon-wrapper bg-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center md:mb-2 lg:mb-4 mx-auto">
+              <Dumbbell size={32} />
             </div>
             <div>
               <h3 className=" text-lg lg:md:text-xl font-semibold text-white text-center mb-4">Musculação e Condicionamento</h3>
@@ -41,8 +41,8 @@ export default function OurServices() {
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 md:px-2 lg:px-4 mb-8">
           <div style={{ background: 'linear-gradient(to bottom right, #02012F, #0A1854 )' }} className="rounded-lg p-8 transition duration-500 ease-in-out transform hover:scale-105 h-80 md:h-80 ">
-            <div className="icon-wrapper bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center md:mb-2 lg:mb-4 mx-auto">
-              <Droplet size={32} />
+            <div className="icon-wrapper bg-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center md:mb-2 lg:mb-4 mx-auto">
+              <Salad size={32} />
             </div>
             <div>
               <h3 className=" text-lg lg:md:text-xl font-semibold text-white text-center mb-4">Avaliação Física e Nutricional</h3>
@@ -52,8 +52,8 @@ export default function OurServices() {
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 md:px-2 lg:px-4 mb-8">
           <div style={{ background: 'linear-gradient(to bottom right, #02012F, #0A1854 )' }} className="rounded-lg p-8 transition duration-500 ease-in-out transform hover:scale-105 h-80 md:h-80 ">
-            <div className="icon-wrapper bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center md:mb-2 lg:mb-4 mx-auto">
-              <Heart size={32} />
+            <div className="icon-wrapper bg-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center md:mb-2 lg:mb-4 mx-auto">
+              <Ruler size={32} />
             </div>
             <div>
               <h3 className=" text-lg lg:md:text-xl font-semibold text-white text-center mb-4">Programas de Emagrecimento Personalizados</h3>
@@ -62,9 +62,9 @@ export default function OurServices() {
           </div>
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 md:px-2 lg:px-4 mb-8">
-          <div style={{ background: 'linear-gradient(to bottom right, #02012F, #0A1854 )' }} className="rounded-lg p-8">
-            <div className="icon-wrapper bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center md:mb-2 lg:mb-4 mx-auto">
-              <Umbrella size={32} />
+          <div style={{ background: 'linear-gradient(to bottom right, #02012F, #0A1854 )' }} className="rounded-lg p-8 transition duration-500 ease-in-out transform hover:scale-105 h-80 md:h-80">
+            <div className="icon-wrapper bg-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center md:mb-2 lg:mb-4 mx-auto">
+              <Droplet size={32} />
             </div>
             <div>
               <h3 className=" text-lg lg:md:text-xl font-semibold text-white text-center mb-4">Aulas Aquáticas e Hidroginástica</h3>
@@ -73,9 +73,9 @@ export default function OurServices() {
           </div>
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 md:px-2 lg:px-4 mb-8">
-          <div style={{ background: 'linear-gradient(to bottom right, #02012F, #0A1854 )' }} className="rounded-lg p-8">
-            <div className="icon-wrapper bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center md:mb-2 lg:mb-4 mx-auto">
-              <Book size={32} />
+          <div style={{ background: 'linear-gradient(to bottom right, #02012F, #0A1854 )' }} className="rounded-lg p-8 transition duration-500 ease-in-out transform hover:scale-105 h-80 md:h-80">
+            <div className="icon-wrapper bg-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center md:mb-2 lg:mb-4 mx-auto">
+              <HandHeart size={32} />
             </div>
             <div>
               <h3 className=" text-lg lg:md:text-xl font-semibold text-white text-center mb-4">Recuperação e Reabilitação</h3>
@@ -84,9 +84,9 @@ export default function OurServices() {
           </div>
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 md:px-2 lg:px-4 mb-8">
-          <div style={{ background: 'linear-gradient(to bottom right, #02012F, #0A1854 )' }} className="rounded-lg p-8">
-            <div className="icon-wrapper bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center md:mb-2 lg:mb-4 mx-auto">
-              <Book size={32} />
+          <div style={{ background: 'linear-gradient(to bottom right, #02012F, #0A1854 )' }} className="rounded-lg p-8 transition duration-500 ease-in-out transform hover:scale-105 h-80 md:h-80">
+            <div className="icon-wrapper bg-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center md:mb-2 lg:mb-4 mx-auto">
+              <Leaf size={32} />
             </div>
             <div>
               <h3 className=" text-lg lg:md:text-xl font-semibold text-white text-center mb-4">Yoga e Meditação</h3>

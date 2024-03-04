@@ -10,8 +10,8 @@ export default function ViewMember({ member }: { member: Membro | null }) {
       className="bg-gradient-to-b from-blue-950 to-gray-600 min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
     >
         <div className="bg-white w-full md:p-2 lg:p-8 md:w-3/4 flex-col shadow-md rounded-lg items-center h-4/5 justify-center">
-                <Link className="" href='/admin/manage/members'>
-                    <ArrowLeft className="text-blue-900 size-6 lg:size-10 lg:ml-6 mt-6 ml-6 justify-start"/>
+                <Link className="flex w-fit" href='/admin/manage/members'>
+                    <ArrowLeft className="text-blue-900 size-6 lg:size-10 mt-6 ml-6"/>
                 </Link>
                 <div className=" flex flex-col-reverse items-center justify-around md:flex-row-reverse ">
                     <div className="md:mr-8 md:mb-12 mb-12">

@@ -2,15 +2,15 @@ import Image from "next/image";
 
 const items = [
   {
-    imgSrc: "/img/professor.png",
+    imgSrc: "/img/professor.jpg",
     title: "Profissionais qualificados",
   },
   {
-    imgSrc: "/img/bicicleta.png",
+    imgSrc: "/img/bicicleta.jpg",
     title: "Mais de 20 modalidades de aulas coletivas",
   },
   {
-    imgSrc: "/img/academia.png",
+    imgSrc: "/img/academia.jpg",
     title: "Equipamentos de qualidade",
   },
 ];

@@ -3,8 +3,8 @@ import Card from "./cards";
 
 export default function CardsPlanos(){
     return(
-        <div className="flex flex-col gap-y-12 min-h-screen">
-            <div className="w-full h-px bg-white"></div>
+        <div className="flex flex-col gap-y-12 min-h-screen ">
+            <div className="w-full h-px bg-gray-100"></div>
             <h1 className="mt-4 text-center font-intro-rust font-semibold text-4xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl text-blue-900 cursor-default">
                 CONHEÇA NOSSOS PLANOS
             </h1>

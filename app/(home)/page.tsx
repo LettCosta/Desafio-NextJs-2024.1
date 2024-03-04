@@ -12,7 +12,6 @@ export default function Home() {
     <div style={{backgroundColor: '#F7F7F7'}} className=" " >
       <AboutUs/>
       <OurServices/>
-      <div className='bg-blue-900 w-full h-0.1 rounded-lg shadow-sm'></div>
       <CardsPlanos/>
       <TresImg/>
       <HorariosFuncionamento/>

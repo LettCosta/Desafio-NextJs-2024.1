@@ -41,7 +41,7 @@ export default function Header(){
     }, [pathname,searchParams])
 
     return(
-        <header style={{backgroundColor: '#0D2253'}} className="sticky top-0 z-20 mx-auto w-full py-8 px-4 md:p-0 mb-8">
+        <header style={{backgroundColor: '#0D2253'}} className="sticky top-0 z-20 mx-auto w-full py-8 px-4 md:p-0">
             <div className="flex flex-wrap items-center justify-between w-full md:w-10/12 mx-auto">
                 <Link href='/' >
                     <Image

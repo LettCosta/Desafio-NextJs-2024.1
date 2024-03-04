@@ -11,7 +11,7 @@ export async function fetchFilteredMembers(query:string, currentPage:number) {
             OR: [{name: {contains: query, mode:"insensitive"}}]
         },
         orderBy:{
-            id: "asc"
+            name: "asc"
         },
         take: itensPerPage,
         skip: offset
@@ -23,7 +23,7 @@ export async function fetchFilteredMembers(query:string, currentPage:number) {
             OR: [{name: {contains: query, mode:"insensitive"}}]
         },
         orderBy:{
-            id: "asc"
+            name: "asc"
         },
 
     })
