@@ -1,23 +1,21 @@
-    'use client'
+'use client'
+import Image from "next/image"
+import Link from "next/link"
+import { useEffect, useState } from "react"
+import { Menu, SearchIcon, X } from "lucide-react"
+import SearchBox from "../searchBox"
+import { usePathname, useSearchParams } from "next/navigation"
 
-    import Image from "next/image"
-    import Link from "next/link"
-    import { useEffect, useState } from "react"
-    import { Menu, SearchIcon, X } from "lucide-react"
-    import { usePathname, useSearchParams } from "next/navigation"
-    import AdmSearchBox from "../searchPage/adm/search_box"
-    
-    
-    const links= [
-        {href: '/', label: 'Home'},
-        {href: '/contato', label: 'Contato'},
-        {href: '/admin/manage/members', label: 'Gerenciar'},
-        {href:'/login', label:'Login'}
-    ]
-    
-    
-    
-export default function Header(){
+
+const links= [
+    {href: '/', label: 'Home'},
+    {href: '/contato', label: 'Contato'},
+    {href: '/members', label: 'Membros'},
+    {href:'/login', label:'Login'}
+]
+
+
+export default function NoSearchHeader(){
     const [isNavOpen, setIsNavOpen] = useState(false)
     const [isSearchOpen, setIsSearchOpen] = useState(false)
  
@@ -65,32 +63,14 @@ export default function Header(){
                     ))}
                 </div>
                 <nav className="flex justify-end ">
-                    <div className="hidden w-full md:flex items-center justify-between gap-6">
-                        <button onClick={toggleNav}>
-                            {isSearchOpen ?
-                                <X
-                                onClick={toggleSearch}
-                                className="w-10 h-10 text-white cursor-pointer hover:bg-white/20 transition-all duration-200 p-1 rounded-xl" />
-                                :
-                                <SearchIcon
-                                onClick={toggleSearch}
-                                className="w-10 h-10 text-white cursor-pointer hover:bg-white/20 transition-all duration-200 p-1 rounded-xl" />
-                            }
-                        </button>
-                    </div>
-                
                     <div className="md:hidden">
-                        {isNavOpen || isSearchOpen ?
+                        {isNavOpen ?
                             <X 
                             onClick={toggleNavSearch}
                             className="text-white w-8 h-8 p-1 cursor-pointer"
                             /> 
                             :
                             <div className="flex gap-4">
-                                <SearchIcon
-                                onClick={toggleSearch}
-                                className="w-10 h-10 p-1 cursor-pointer text-white"
-                                />
                                 <Menu
                                 onClick={toggleNav}
                                 className="w-10 h-10 p-1 text-white cursor-pointer"
@@ -112,12 +92,7 @@ export default function Header(){
                     </div>
                 )}
 
-                {isSearchOpen && (
-                    <div className="w-full flex justify-end">
-                        <AdmSearchBox />    
-                    </div>
-                )}
-
+                
             </div>
         </header>
     )
