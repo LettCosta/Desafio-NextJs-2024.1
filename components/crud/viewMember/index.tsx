@@ -18,11 +18,11 @@ export default function ViewMember({ member }: { member: Membro | null }) {
                         <h1 className="text-blue-900 font-semibold  text-2xl md:text-xl lg:text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xl mb-12">VISUALIZAR MEMBRO</h1>
                             <div className="flex flex-col gap-2 items-center">
                                 <label className="text-blue-900 font-medium text-md md:text-lg lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl">Nome</label>
-                                <input name="name" placeholder="Nome" className=" drop-shadow-xl border-zinc-200 border  shadow-inherit rounded-3xl mb-6 lg:w-64 lg:mb-8 h-7 px-2" defaultValue={member?.name} />
+                                <input disabled name="name" placeholder="Nome" className=" drop-shadow-xl border-zinc-200 border  shadow-inherit rounded-3xl mb-6 lg:w-64 lg:mb-8 h-7 px-2" defaultValue={member?.name} />
                                 <label className="text-blue-900 font-medium text-md md:text-lg lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl">Cargo</label>
-                                <input name="cargo" placeholder="Cargo" className="drop-shadow-xl border-zinc-200 border shadow-inherit rounded-3xl mb-6 lg:w-64 lg:mb-8 h-7 px-2" defaultValue={member?.cargo}/>
+                                <input disabled name="cargo" placeholder="Cargo" className="drop-shadow-xl border-zinc-200 border shadow-inherit rounded-3xl mb-6 lg:w-64 lg:mb-8 h-7 px-2" defaultValue={member?.cargo}/>
                                 <label className="text-blue-900 font-medium text-md md:text-lg lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl">Email</label>
-                                <input name="email" placeholder="Email" className=" drop-shadow-xl border-zinc-200 border shadow-inherit rounded-3xl h-7 lg:w-64 px-2" defaultValue={member?.email} />
+                                <input disabled name="email" placeholder="Email" className=" drop-shadow-xl border-zinc-200 border shadow-inherit rounded-3xl h-7 lg:w-64 px-2" defaultValue={member?.email} />
                             </div>
                     </div>
                     
